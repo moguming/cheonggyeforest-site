@@ -1,0 +1,383 @@
+:root {
+  --ink:#171916;
+  --forest:#34443b;
+  --gold:#b59a6a;
+  --cream:#f5f0e7;
+  --muted:#a9a69d}
+
+* {
+  box-sizing:border-box}
+
+html {
+  scroll-behavior:smooth}
+
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Arial,'Noto Sans KR',sans-serif}
+
+button,input,textarea {
+  font:inherit}
+
+button,a {
+  cursor:pointer}
+
+a {
+  text-decoration:none;
+  color:inherit}
+
+.serif {
+  font-family:Georgia,'Noto Serif KR',serif}
+
+header {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  z-index:10;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:26px 6vw;
+  border-bottom:1px solid #ffffff35}
+
+.logo {
+  font-family:Georgia,serif;
+  font-size:29px;
+  letter-spacing:.05em}
+
+.logo small {
+  display:block;
+  font:9px Arial;
+  letter-spacing:.32em;
+  margin-top:4px}
+
+nav {
+  display:flex;
+  gap:30px;
+  font-size:12px;
+  letter-spacing:.15em}
+
+nav a:hover {
+  color:#d4b985}
+
+.hero {
+  min-height:100svh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  background:linear-gradient(90deg,#0c100cc4,#10130d72),url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1800&q=85') center/cover}
+
+.hero-inner {
+  padding:120px 20px 90px;
+  max-width:900px}
+
+.eyebrow {
+  letter-spacing:.32em;
+  font-size:12px;
+  color:#d5b984}
+
+.hero h1 {
+  font-size:clamp(40px,6.4vw,88px);
+  font-weight:400;
+  line-height:1.3;
+  letter-spacing:-.05em;
+  margin:30px 0}
+
+.hero p {
+  line-height:2;
+  color:#e3ded4}
+
+.outline {
+  display:inline-block;
+  margin-top:28px;
+  border:1px solid #c6ad7e;
+  color:#f5e8ce;
+  padding:17px 38px;
+  background:transparent;
+  letter-spacing:.12em;
+  font-size:12px}
+
+.outline:hover {
+  background:#b59a6a;
+  color:#171916}
+
+section {
+  padding:105px 6vw}
+
+.section-head {
+  text-align:center;
+  margin-bottom:55px}
+
+.section-head .eyebrow {
+  color:#947749}
+
+.section-head h2 {
+  font-size:clamp(35px,4vw,55px);
+  font-weight:400;
+  margin:14px 0}
+
+.section-head p {
+  color:#777;
+  line-height:1.9}
+
+.restaurant-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px}
+
+.restaurant {
+  background:#fff}
+
+.restaurant img {
+  display:block;
+  width:100%;
+  height:390px;
+  object-fit:cover}
+
+.restaurant-content {
+  padding:30px}
+
+.restaurant-content h3 {
+  font-size:23px;
+  font-weight:400;
+  margin:0 0 12px}
+
+.restaurant-content p {
+  font-size:14px;
+  line-height:1.9;
+  color:#6c6b65;
+  min-height:55px}
+
+.restaurant-actions {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:22px}
+
+.btn {
+  border:1px solid #c8c1b3;
+  padding:11px 15px;
+  background:white;
+  color:#292b26;
+  font-size:12px}
+
+.btn.primary {
+  background:#34443b;
+  border-color:#34443b;
+  color:white}
+
+.btn:disabled {
+  opacity:.4;
+  cursor:not-allowed}
+
+.story {
+  background:#1d2821;
+  color:#f6f0e4;
+  text-align:center}
+
+.story .section-head p {
+  color:#c8c8bd}
+
+.story-quote {
+  font-size:clamp(25px,3.5vw,46px);
+  line-height:1.7;
+  font-weight:400}
+
+.story-note {
+  color:#c5bdad;
+  line-height:2;
+  max-width:680px;
+  margin:25px auto}
+
+.details {
+  max-width:1000px;
+  margin:auto}
+
+.detail {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+  margin-bottom:50px;
+  padding-bottom:50px;
+  border-bottom:1px solid #d8d1c6}
+
+.detail img {
+  width:100%;
+  height:280px;
+  object-fit:cover}
+
+.detail h3 {
+  font-size:29px;
+  font-weight:400}
+
+.detail p {
+  color:#67675f;
+  line-height:1.9}
+
+.detail .meta {
+  font-size:13px;
+  white-space:pre-line}
+
+footer {
+  background:#171916;
+  color:#ded8c9;
+  padding:55px 6vw 110px}
+
+footer p {
+  color:#aaa89d;
+  font-size:12px;
+  line-height:1.9}
+
+.mobile-actions {
+  display:none}
+
+.modal {
+  position:fixed;
+  inset:0;
+  z-index:30;
+  background:#0009;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px}
+
+.modal.show {
+  display:flex}
+
+.panel {
+  background:#f5f0e7;
+  color:#171916;
+  padding:28px;
+  width:min(720px,100%);
+  max-height:90vh;
+  overflow:auto;
+  border-radius:3px}
+
+.panel-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center}
+
+.panel label {
+  display:block;
+  margin:15px 0 5px;
+  font-size:12px;
+  color:#555}
+
+.panel input,.panel textarea {
+  width:100%;
+  padding:12px;
+  border:1px solid #c8c0b3;
+  background:white}
+
+.panel textarea {
+  min-height:70px}
+
+.panel .btn {
+  margin-top:15px}
+
+.edit-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px}
+
+.hint {
+  font-size:12px;
+  color:#706d65;
+  line-height:1.8}
+
+.toast {
+  position:fixed;
+  bottom:90px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#1d2821;
+  color:white;
+  padding:14px 20px;
+  z-index:50;
+  display:none;
+  max-width:90%;
+  text-align:center}
+
+#menuToggle {
+  display:none}
+
+@media(max-width:850px) {
+  header {
+  padding:18px 5vw}
+
+.logo {
+  font-size:24px}
+
+nav {
+  display:none;
+  position:absolute;
+  top:76px;
+  left:0;
+  right:0;
+  background:#171916;
+  padding:22px;
+  flex-direction:column}
+
+nav.open {
+  display:flex}
+
+#menuToggle {
+  display:block;
+  background:none;
+  border:0;
+  color:white;
+  font-size:25px}
+
+.restaurant-grid {
+  grid-template-columns:1fr}
+
+.restaurant img {
+  height:320px}
+
+.detail {
+  grid-template-columns:1fr;
+  gap:15px}
+
+.detail img {
+  height:230px}
+
+section {
+  padding:75px 5vw}
+
+.mobile-actions {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:12;
+  background:#1b2921;
+  color:white;
+  box-shadow:0 -5px 20px #0003}
+
+.mobile-actions button {
+  background:none;
+  color:white;
+  border:0;
+  padding:17px 5px;
+  font-size:14px}
+
+.mobile-actions button+button {
+  border-left:1px solid #ffffff33}
+
+footer {
+  padding-bottom:130px}
+
+.edit-grid {
+  grid-template-columns:1fr}
+
+}

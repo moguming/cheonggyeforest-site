@@ -1,0 +1,866 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==================================================
+       01. 검색엔진 기본 정보 ★ 수정 가능
+       ================================================== -->
+
+  <title>
+    청계산 맛집·양대창·등산 후 식사 |
+    청계숲양대창 청계산본점
+  </title>
+
+  <meta
+    name="description"
+    content="청계산입구역 인근 숯불 양대창 전문점 청계숲양대창 청계산본점. 시그니처 양모둠, 한우곱창전골, 투뿔 한우국밥. 청계산 등산 후 식사, 가족 외식, 단체 모임에 좋은 주차 가능한 식당."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://cheonggyeforest.vercel.app/cheonggyesan/"
+  >
+
+  <!-- SNS 공유 정보 -->
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="청계숲양대창 청계산본점 | 청계산 숯불 양대창 맛집"
+  >
+
+  <meta
+    property="og:description"
+    content="청계산 자락에서 즐기는 숯불 양대창. 청계산입구역 인근, 주차 가능, 점심 국밥과 한우곱창전골."
+  >
+
+  <meta
+    property="og:url"
+    content="https://cheonggyeforest.vercel.app/cheonggyesan/"
+  >
+
+  <!-- ==================================================
+       02. Restaurant 구조화 데이터 (GEO / SEO)
+
+       영업시간, 주소, 전화번호 변경 시
+       이 구역도 함께 수정하세요.
+       ================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "@id": "https://cheonggyeforest.vercel.app/cheonggyesan/#restaurant",
+    "name": "청계숲양대창 청계산본점",
+    "alternateName": "Cheonggyeforest Cheonggyesan",
+    "url": "https://cheonggyeforest.vercel.app/cheonggyesan/",
+    "description": "서울 서초구 청계산입구역 인근에 위치한 숯불 양대창 전문점. 시그니처 양모둠, 한우곱창전골, 투뿔 한우국밥 등을 제공하며 청계산 등산 후 식사와 가족 외식, 단체 모임에 적합한 식당입니다.",
+    "telephone": "+82-507-1355-2350",
+    "servesCuisine": [
+      "한식",
+      "숯불 양대창",
+      "한우 내장구이"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "청룡마을1길 15",
+      "addressLocality": "서초구",
+      "addressRegion": "서울특별시",
+      "addressCountry": "KR"
+    },
+    "hasMap": "https://map.naver.com/p/search/청계숲양대창%20청계산본점",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "11:30",
+        "closes": "22:30"
+      }
+    ],
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "주차 가능",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "단체 이용 가능",
+        "value": true
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==================================================
+       03. 디자인 ★ 브랜드 컬러 #264122
+       ================================================== -->
+
+  <style>
+    :root {
+      --forest: #264122;
+      --forest-dark: #192d17;
+      --ivory: #f8f6f0;
+      --gold: #b59a64;
+      --text: #292c27;
+      --muted: #70746c;
+      --line: #e4e0d7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--text);
+      font-family: "Pretendard", "Noto Sans KR", sans-serif;
+      line-height: 1.85;
+      word-break: keep-all;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    /* 상단 메뉴 */
+    header {
+      background: var(--forest-dark);
+      color: #fff;
+      padding: 22px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 21px;
+      letter-spacing: 2px;
+    }
+
+    /* 메인 배너 */
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 90px 20px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(18, 37, 17, 0.95),
+          rgba(38, 65, 34, 0.82)
+        );
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 56px);
+      line-height: 1.4;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      color: #e4e9df;
+      font-size: 17px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      color: var(--gold);
+    }
+
+    /* 공통 섹션 */
+    section {
+      padding: 95px 0;
+    }
+
+    .section-title {
+      font-size: clamp(27px, 3vw, 38px);
+      line-height: 1.45;
+      margin: 15px 0 25px;
+    }
+
+    .section-desc {
+      max-width: 800px;
+      color: var(--muted);
+    }
+
+    .dark-section {
+      background: var(--forest);
+      color: white;
+    }
+
+    .dark-section .section-desc {
+      color: #e0e9dd;
+    }
+
+    /* 정보 카드 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature {
+      padding: 32px;
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      color: var(--forest);
+    }
+
+    /* 메뉴 카드 */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .menu-item {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 30px;
+    }
+
+    .menu-item h3 {
+      margin-top: 0;
+      color: var(--forest);
+    }
+
+    /* 브랜드 이야기 */
+    .story-year {
+      font-family: Georgia, serif;
+      font-size: clamp(60px, 10vw, 120px);
+      line-height: 1;
+      color: var(--gold);
+      margin-bottom: 25px;
+    }
+
+    /* FAQ */
+    .faq {
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .faq p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* 버튼 */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--forest);
+      color: white;
+      padding: 13px 25px;
+      font-weight: 600;
+    }
+
+    .button.outline {
+      background: transparent;
+      color: var(--forest);
+      border: 1px solid var(--forest);
+    }
+
+    /* 하단 */
+    footer {
+      background: var(--forest-dark);
+      color: #dce4da;
+      padding: 45px 0;
+      font-size: 14px;
+    }
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      section {
+        padding: 65px 0;
+      }
+
+      .feature-grid,
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      .hero {
+        min-height: 450px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================================================
+       04. 상단 메뉴
+       ================================================== -->
+
+  <header>
+    <div class="container header-inner">
+
+      <a class="logo" href="../index.html">
+        CHEONGGYEFOREST
+      </a>
+
+      <nav>
+        <a href="../index.html">
+          청계숲 홈으로
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ================================================
+         05. 메인 소개 ★ 문구 수정 가능
+         ================================================ -->
+
+    <div class="hero">
+      <div class="container">
+
+        <div class="eyebrow">
+          CHEONGGYEFOREST · CHEONGGYESAN
+        </div>
+
+        <h1>
+          청계산 자락에서 즐기는<br>
+          숯불 양대창의 깊은 맛
+        </h1>
+
+        <p>
+          2016년부터 이어온 청계숲양대창의 시작<br>
+          청계숲양대창 청계산본점
+        </p>
+
+      </div>
+    </div>
+
+
+    <!-- ================================================
+         06. 매장 소개
+         ================================================ -->
+
+    <section id="about">
+      <div class="container">
+
+        <div class="eyebrow">ABOUT US</div>
+
+        <h2 class="section-title">
+          청계산입구역 근처에서 만나는<br>
+          숯불 양대창 전문점
+        </h2>
+
+        <p class="section-desc">
+          청계숲양대창 청계산본점은
+          서울 서초구 청룡마을1길 15에 위치한
+          숯불 양대창 전문점입니다.
+          청계산입구역에서 도보로 방문할 수 있으며
+          청계산 등산 후 식사나 가족 외식,
+          지인 모임을 위해 찾기 좋은 공간입니다.
+        </p>
+
+        <p class="section-desc">
+          숯불에 구워 즐기는 특양과 한우대창,
+          한우염통을 비롯해 한우곱창전골,
+          투뿔 한우국밥 등
+          다양한 식사 메뉴를 준비하고 있습니다.
+        </p>
+
+        <div class="feature-grid">
+
+          <div class="feature">
+            <h3>숯불 양대창</h3>
+            <p>
+              특양과 한우대창, 한우염통을
+              숯불에 구워 각 부위의
+              풍미와 식감을 즐길 수 있습니다.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>청계산 나들이</h3>
+            <p>
+              청계산입구역과 가까워
+              등산 후 든든한 식사나
+              주말 나들이 식사에 어울립니다.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>주차 가능한 식당</h3>
+            <p>
+              차량을 이용해 방문하는 손님을 위한
+              주차 공간이 마련되어 있습니다.
+              혼잡 시 이용 가능 여부는
+              매장에 문의해 주세요.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================
+         07. 브랜드 이야기
+         ================================================ -->
+
+    <section class="dark-section" id="story">
+      <div class="container">
+
+        <div class="eyebrow">OUR STORY</div>
+
+        <div class="story-year">2016</div>
+
+        <h2 class="section-title">
+          청계산에서 시작된<br>
+          청계숲양대창의 이야기
+        </h2>
+
+        <p class="section-desc">
+          청계숲양대창은
+          2016년 5월 청계산 자락에서
+          첫걸음을 시작했습니다.
+        </p>
+
+        <p class="section-desc">
+          청계산기와집양대창이라는 이름으로
+          운영해 온 시간을 바탕으로
+          2024년 11월 현재의 자리로 이전하며
+          청계숲양대창이라는 이름으로
+          새롭게 출발했습니다.
+        </p>
+
+        <p class="section-desc">
+          좋은 재료를 정성껏 준비하고
+          숯불에 구워낸 양대창을
+          편안한 공간에서 즐길 수 있도록
+          노력하고 있습니다.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================
+         08. 대표 메뉴
+         ================================================ -->
+
+    <section id="menu">
+      <div class="container">
+
+        <div class="eyebrow">SIGNATURE MENU</div>
+
+        <h2 class="section-title">
+          청계산본점의 대표 메뉴
+        </h2>
+
+        <p class="section-desc">
+          숯불구이부터 따뜻한 국물 요리까지,
+          취향과 방문 목적에 맞는
+          메뉴를 선택할 수 있습니다.
+        </p>
+
+        <div class="menu-grid">
+
+          <div class="menu-item">
+            <h3>시그니처 양모둠</h3>
+            <p>
+              특양, 한우대창, 한우염통을
+              한 번에 즐길 수 있는
+              청계숲양대창의 대표 메뉴입니다.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <h3>한가득 한우곱창전골</h3>
+            <p>
+              한우곱창과 채소를 넣어
+              푸짐하게 끓여내는 전골로
+              여러 명이 함께 즐기기 좋습니다.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <h3>투뿔 한우국밥</h3>
+            <p>
+              따뜻하고 든든한 국물 식사를
+              원하는 분들을 위한
+              점심 식사 메뉴입니다.
+            </p>
+          </div>
+
+          <div class="menu-item">
+            <h3>보양 양곰탕</h3>
+            <p>
+              양을 활용한 국물 요리로
+              점심이나 등산 후 식사로
+              즐길 수 있습니다.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================
+         09. 기본 반찬과 식사 서비스
+         ================================================ -->
+
+    <section class="dark-section" id="food">
+      <div class="container">
+
+        <div class="eyebrow">OUR TABLE</div>
+
+        <h2 class="section-title">
+          고기 한 점부터 기본 반찬까지<br>
+          정성을 담은 한 상
+        </h2>
+
+        <p class="section-desc">
+          청계숲양대창은
+          유기농 상추무침과
+          천연 과일로 맛을 낸 물김치 등
+          기본 반찬에도 정성을 담습니다.
+        </p>
+
+        <p class="section-desc">
+          숯불에 구워낸 양대창과
+          산뜻한 기본 반찬이 어우러져
+          한 끼의 만족도를 높입니다.
+        </p>
+
+        <p class="section-desc">
+          점심 식사 메뉴에는
+          한우수육 서비스가 제공되는 경우가 있습니다.
+          서비스 제공 시간과 대상 메뉴는
+          방문 전 매장에 확인해 주세요.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================
+         10. 방문 목적별 안내 (AEO / GEO)
+         ================================================ -->
+
+    <section id="occasion">
+      <div class="container">
+
+        <div class="eyebrow">DINING OCCASIONS</div>
+
+        <h2 class="section-title">
+          이런 날 방문하기 좋은 식당
+        </h2>
+
+        <div class="feature-grid">
+
+          <div class="feature">
+            <h3>청계산 등산 후 식사</h3>
+            <p>
+              등산 후 따뜻한 국밥이나
+              한우곱창전골로 든든하게
+              식사하고 싶은 분들에게
+              어울립니다.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>부모님과 가족 외식</h3>
+            <p>
+              청계산의 여유로운 분위기에서
+              가족과 함께 숯불 양대창과
+              식사 메뉴를 즐길 수 있습니다.
+            </p>
+          </div>
+
+          <div class="feature">
+            <h3>주말 나들이와 모임</h3>
+            <p>
+              청계산 인근에서
+              주차 가능한 식당이나
+              모임 장소를 찾는 분들에게
+              좋은 선택지가 될 수 있습니다.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================
+         11. 자주 묻는 질문 (AEO 핵심)
+         ================================================ -->
+
+    <section id="faq">
+      <div class="container">
+
+        <div class="eyebrow">FAQ</div>
+
+        <h2 class="section-title">
+          청계숲양대창 청계산본점<br>
+          자주 묻는 질문
+        </h2>
+
+        <div class="faq">
+          <h3>
+            Q. 청계숲양대창 청계산본점은 어디에 있나요?
+          </h3>
+          <p>
+            서울 서초구 청룡마을1길 15에 있습니다.
+            신분당선 청계산입구역 2번 출구에서
+            도보 약 7~8분 거리입니다.
+          </p>
+        </div>
+
+        <div class="faq">
+          <h3>
+            Q. 청계산 등산 후 식사하기 좋은 곳인가요?
+          </h3>
+          <p>
+            네. 청계산입구역과 가까운 곳에 있어
+            등산 후 숯불 양대창이나
+            국밥, 한우곱창전골을
+            즐길 수 있습니다.
+          </p>
+        </div>
+
+        <div class="faq">
+          <h3>
+            Q. 대표 메뉴는 무엇인가요?
+          </h3>
+          <p>
+            특양, 한우대창, 한우염통을 함께
+            즐길 수 있는 시그니처 양모둠과
+            한우곱창전골, 투뿔 한우국밥,
+            보양 양곰탕 등이 있습니다.
+          </p>
+        </div>
+
+        <div class="faq">
+          <h3>
+            Q. 청계숲양대창 청계산본점은 주차가 가능한가요?
+          </h3>
+          <p>
+            네. 매장 방문객을 위한
+            주차 공간이 마련되어 있습니다.
+            주말 등 혼잡한 시간에는
+            주차 가능 여부를 확인해 주세요.
+          </p>
+        </div>
+
+        <div class="faq">
+          <h3>
+            Q. 점심에도 양대창 외에 식사 메뉴가 있나요?
+          </h3>
+          <p>
+            네. 투뿔 한우국밥,
+            보양 양곰탕 등
+            점심 식사 메뉴를 제공합니다.
+          </p>
+        </div>
+
+        <div class="faq">
+          <h3>
+            Q. 점심 식사에 한우수육 서비스가 제공되나요?
+          </h3>
+          <p>
+            점심 식사 메뉴 주문 시
+            한우수육 서비스가 제공되는
+            것으로 소개되어 있습니다.
+            현재 진행 여부와 제공 조건은
+            매장에 확인해 주세요.
+          </p>
+        </div>
+
+        <div class="faq">
+          <h3>
+            Q. 청계숲양대창은 언제부터 운영했나요?
+          </h3>
+          <p>
+            2016년 5월 청계산에서 시작했으며,
+            2024년 11월 현재의 자리로 이전하고
+            청계숲양대창이라는 이름으로
+            운영하고 있습니다.
+          </p>
+        </div>
+
+        <div class="faq">
+          <h3>
+            Q. 청계숲양대창 청계산본점 영업시간은 어떻게 되나요?
+          </h3>
+          <p>
+            외부 등록 정보 기준
+            매일 오전 11시 30분부터
+            오후 10시 30분까지입니다.
+            방문 전 최신 영업시간을 확인해 주세요.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================
+         12. 위치 및 방문 안내
+         ================================================ -->
+
+    <section id="location">
+      <div class="container">
+
+        <div class="eyebrow">LOCATION</div>
+
+        <h2 class="section-title">
+          청계숲양대창 청계산본점
+        </h2>
+
+        <p>
+          <strong>주소</strong><br>
+          서울 서초구 청룡마을1길 15
+        </p>
+
+        <p>
+          <strong>전화번호</strong><br>
+          0507-1355-2350
+        </p>
+
+        <p>
+          <strong>영업시간</strong><br>
+          매일 11:30 ~ 22:30<br>
+          <small>
+            외부 등록 정보 기준이며
+            변경될 수 있습니다.
+          </small>
+        </p>
+
+        <p>
+          <strong>대중교통</strong><br>
+          신분당선 청계산입구역 2번 출구<br>
+          도보 약 7~8분
+        </p>
+
+        <p>
+          <strong>주차</strong><br>
+          매장 주차 공간 이용 가능
+        </p>
+
+        <div class="buttons">
+
+          <a
+            class="button"
+            href="tel:050713552350"
+          >
+            전화 문의
+          </a>
+
+          <a
+            class="button outline"
+            href="https://map.naver.com/p/search/청계숲양대창%20청계산본점"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            네이버 지도
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==================================================
+       13. 하단
+       ================================================== -->
+
+  <footer>
+    <div class="container">
+
+      <strong>CHEONGGYEFOREST</strong>
+
+      <p>
+        청계숲양대창 청계산본점<br>
+        서울 서초구 청룡마을1길 15<br>
+        0507-1355-2350
+      </p>
+
+      <p>
+        © CHEONGGYEFOREST.
+        All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,1203 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- ==================================================
+       01. 기본 설정
+       ================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- ==================================================
+       02. SEO / AEO / GEO 메타 정보
+       ★ 검색 결과에 표시될 제목과 설명
+       ================================================== -->
+
+  <title>청계산 맛집·메밀옹심이·계절음식 | 청계산지기</title>
+
+
+  <meta
+    name="description"
+    content="청계산입구역 계절음식 전문점 청계산지기. 수제옹심이 메밀칼국수, 손메밀묵온반, 육전, 오징어바글바글김치전. 평일·주말 구분 없이 투뿔한우어복쟁반 서비스."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <link
+    rel="canonical"
+    href="https://cheonggyeforest.vercel.app/jigi/"
+  >
+
+  <!-- SNS 공유 정보 -->
+  <meta
+    property="og:type"
+    content="restaurant"
+  >
+
+  <meta
+    property="og:locale"
+    content="ko_KR"
+  >
+
+  <meta
+    property="og:title"
+    content="청계산지기 | 청계산 계절음식 전문점"
+  >
+
+  <meta
+    property="og:description"
+    content="청계산에서 만나는 메밀 음식과 계절의 맛. 수제옹심이 메밀칼국수, 손메밀묵온반, 육전과 제철 한식."
+  >
+
+  <meta
+    property="og:url"
+    content="https://cheonggyeforest.vercel.app/jigi/"
+  >
+
+  <!-- ==================================================
+       03. Restaurant 구조화 데이터
+       ★ 매장 정보 변경 시 이곳도 함께 수정
+       ================================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "@id": "https://cheonggyeforest.vercel.app/jigi/#restaurant",
+    "name": "청계산지기",
+    "alternateName": "CHEONGGYEFOREST 청계산지기",
+    "url": "https://cheonggyeforest.vercel.app/jigi/",
+    "description": "서울 서초구 청계산입구역 원터골 등산로 앞에 위치한 계절음식 전문점. 수제옹심이 메밀칼국수, 손메밀묵온반, 육전, 오징어바글바글김치전과 계절별 한식 메뉴를 제공합니다.",
+    "telephone": "0507-1436-2387",
+    "servesCuisine": [
+      "한식",
+      "메밀요리",
+      "계절음식"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "청룡마을1길 3 1층",
+      "addressLocality": "서초구",
+      "addressRegion": "서울특별시",
+      "addressCountry": "KR"
+    },
+    "hasMap": "https://m.place.naver.com/restaurant/1776139315/home?entry=plt",
+    "sameAs": [
+      "https://m.place.naver.com/restaurant/1776139315/home?entry=plt",
+      "https://blog.naver.com/cheonggye_woni"
+    ],
+    "acceptsReservations": true,
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "주차",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "단체 이용",
+        "value": true
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==================================================
+       04. 디자인
+       ★ 브랜드 컬러: #264122
+       ================================================== -->
+
+  <style>
+    :root {
+      /* 청계산지기 공식 시그니처 컬러 */
+      --forest: #422212;
+
+      /* 보조 컬러 */
+      --forest-dark: #2d170c;
+      --forest-light: #f1eae3;
+
+      /* 공통 디자인 컬러 */
+      --ivory: #f8f6f0;
+      --white: #ffffff;
+      --gold: #b59a64;
+      --text: #292c27;
+      --muted: #70746c;
+      --line: #e4e0d7;
+    }
+
+
+    /* 전체 기본 설정 */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--text);
+      font-family:
+        "Pretendard",
+        "Noto Sans KR",
+        "Malgun Gothic",
+        sans-serif;
+      line-height: 1.85;
+      word-break: keep-all;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    /* --------------------------------------------------
+       04-1. 상단 헤더
+       -------------------------------------------------- */
+
+    .site-header {
+      background: var(--forest-dark);
+      color: var(--white);
+      padding: 22px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 21px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .header-link {
+      font-size: 14px;
+      color: #e1e9de;
+    }
+
+    /* --------------------------------------------------
+       04-2. 메인 배너
+       ★ 실제 사진을 넣으려면 background 수정
+       -------------------------------------------------- */
+
+    .hero {
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px;
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(181, 154, 100, 0.18),
+          transparent 45%
+        ),
+        linear-gradient(
+          135deg,
+          #192d17 0%,
+          #264122 65%,
+          #355333 100%
+        );
+      color: var(--white);
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      margin: 20px 0;
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.4;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      color: #e0e8dc;
+      font-size: 17px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+    }
+
+    /* --------------------------------------------------
+       04-3. 공통 섹션
+       -------------------------------------------------- */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      margin: 15px 0 25px;
+      font-size: clamp(27px, 3.5vw, 40px);
+      line-height: 1.45;
+      letter-spacing: -0.8px;
+    }
+
+    .section-desc {
+      max-width: 780px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .dark-section {
+      background: var(--forest);
+      color: var(--white);
+    }
+
+    .dark-section .section-desc {
+      color: #e0e8dc;
+    }
+
+    .light-section {
+      background: var(--forest-light);
+    }
+
+    /* --------------------------------------------------
+       04-4. 카드 디자인
+       -------------------------------------------------- */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 35px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      color: var(--forest);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* --------------------------------------------------
+       04-5. 메뉴 디자인
+       -------------------------------------------------- */
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 45px;
+    }
+
+    .menu-item {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 35px;
+    }
+
+    .menu-item h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      color: var(--forest);
+    }
+
+    .menu-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .menu-category {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: #826d43;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    /* --------------------------------------------------
+       04-6. 서비스 안내
+       -------------------------------------------------- */
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .service-card {
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .service-day {
+      color: #d9c394;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .service-card h3 {
+      margin: 12px 0;
+      font-size: 26px;
+    }
+
+    .service-card p {
+      color: #e0e8dc;
+    }
+
+    .service-note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: #d4dfd0;
+    }
+
+    /* --------------------------------------------------
+       04-7. 브랜드 스토리
+       -------------------------------------------------- */
+
+    .story-label {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: clamp(55px, 9vw, 100px);
+      line-height: 1.1;
+      margin: 20px 0;
+    }
+
+    /* --------------------------------------------------
+       04-8. FAQ
+       -------------------------------------------------- */
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 26px 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* --------------------------------------------------
+       04-9. 버튼
+       -------------------------------------------------- */
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 26px;
+      background: var(--forest);
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      text-align: center;
+      border: 1px solid var(--forest);
+      transition: opacity 0.2s ease;
+    }
+
+    .button:hover {
+      opacity: 0.85;
+    }
+
+    .button.outline {
+      background: transparent;
+      color: var(--forest);
+    }
+
+    /* --------------------------------------------------
+       04-10. 하단
+       -------------------------------------------------- */
+
+    .site-footer {
+      background: var(--forest-dark);
+      color: #dce4da;
+      padding: 55px 0;
+      font-size: 14px;
+    }
+
+    .footer-brand {
+      font-family: Georgia, serif;
+      letter-spacing: 2px;
+      font-size: 20px;
+    }
+
+    /* --------------------------------------------------
+       04-11. 모바일 반응형
+       -------------------------------------------------- */
+
+    @media (max-width: 768px) {
+      section {
+        padding: 70px 0;
+      }
+
+      .header-inner {
+        flex-direction: column;
+      }
+
+      .hero {
+        min-height: 480px;
+        padding: 75px 20px;
+      }
+
+      .card-grid,
+      .menu-grid,
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .menu-item,
+      .service-card {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================================================
+       05. 상단 헤더
+       ================================================== -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a
+        class="logo"
+        href="../index.html"
+        aria-label="청계숲 메인 홈페이지"
+      >
+        CHEONGGYEFOREST
+      </a>
+
+      <nav>
+        <a
+          class="header-link"
+          href="../index.html"
+        >
+          청계숲 홈으로 ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================================================
+         06. 메인 배너
+         ★ 메인 제목과 소개 문구
+         ================================================ -->
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          CHEONGGYEFOREST · SEASONAL DINING
+        </div>
+
+        <h1>
+          계절을 담고<br>
+          정성을 차리는 곳
+        </h1>
+
+        <p>
+          청계산 자락에서 만나는<br>
+          메밀 음식과 제철 한식
+        </p>
+
+        <p>
+          청계산지기 · 계절음식 전문점
+        </p>
+
+        <div class="buttons" style="justify-content: center;">
+          <a
+            class="button"
+            href="#menu"
+            style="background: #ffffff; color: #264122;"
+          >
+            대표 메뉴 보기
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         07. 매장 소개
+         ================================================ -->
+
+    <section id="about">
+      <div class="container">
+
+        <div class="eyebrow">ABOUT CHEONGGYESAN JIGI</div>
+
+        <h2 class="section-title">
+          청계산입구역 원터골 앞<br>
+          계절음식 전문점 청계산지기
+        </h2>
+
+        <p class="section-desc">
+          청계산지기는 서울 서초구 청룡마을1길 3,
+          청계산입구역 2번 출구에서 약 400m 거리에
+          위치한 계절음식 전문점입니다.
+        </p>
+
+        <p class="section-desc">
+          청계산 원터골 등산로 입구 근처에서
+          수제옹심이 메밀칼국수, 손메밀묵온반,
+          육전, 오징어바글바글김치전 등
+          정성스러운 한식을 선보입니다.
+        </p>
+
+        <p class="section-desc">
+          청계산 등산 후 식사는 물론,
+          부모님과 함께하는 가족 외식,
+          지인과의 점심 모임,
+          집밥 같은 한 끼가 생각나는 날에도
+          편안하게 찾을 수 있는 식당을 지향합니다.
+        </p>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>직접 준비하는 메밀 음식</h3>
+            <p>
+              메밀의 담백한 매력을 살린
+              옹심이 메밀칼국수와
+              손메밀묵 요리를 준비합니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>계절에 맞춘 한 상</h3>
+            <p>
+              봄동비빔밥, 여름 막국수,
+              겨울 굴 요리처럼
+              계절에 어울리는 음식을 선보입니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>넉넉한 인심</h3>
+            <p>
+              식사와 함께 제공되는
+              한우어복쟁반과 한우수육 등
+              특별한 서비스로
+              한 끼의 즐거움을 더합니다.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         08. 브랜드 스토리
+         ★ 워니 블로그의 실제 스토리 확인 후
+           이 부분을 더 구체적으로 보완 가능
+         ================================================ -->
+
+    <section class="dark-section" id="story">
+      <div class="container">
+
+        <div class="eyebrow">OUR STORY</div>
+
+        <div class="story-label">CHEONGGYE</div>
+
+        <h2 class="section-title">
+          청계산에서 시작된<br>
+          음식에 대한 마음
+        </h2>
+
+        <p class="section-desc">
+          청계숲의 이야기는
+          2016년 청계산에서 시작되었습니다.
+        </p>
+
+        <p class="section-desc">
+          숯불 양대창으로 시작한 음식에 대한 정성은
+          청계산지기에서 또 다른 모습으로 이어집니다.
+          제철 식재료와 메밀을 활용한 음식,
+          그리고 손님에게 한 가지라도
+          더 대접하고 싶은 마음입니다.
+        </p>
+
+        <p class="section-desc">
+          청계산지기는 특별한 날뿐 아니라
+          밥하기 싫은 날,
+          부모님과 외식하고 싶은 날,
+          등산을 마치고 든든한 식사가 필요한 날에도
+          자연스럽게 떠오르는 식당이 되고자 합니다.
+        </p>
+
+        <p class="section-desc">
+          배보다 배꼽이 큰 가게입니다~
+          그만큼 한 끼를 대접하는 마음은
+          넉넉하게 담고 싶습니다.
+        </p>
+
+        <div class="buttons">
+          <a
+            class="button"
+            href="https://blog.naver.com/cheonggye_woni"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="background: #ffffff; color: #264122;"
+          >
+            청계숲 워니 블로그 ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         09. 대표 메뉴
+         ★ 실제 메뉴명 기준
+         ================================================ -->
+
+    <section id="menu">
+      <div class="container">
+
+        <div class="eyebrow">SIGNATURE MENU</div>
+
+        <h2 class="section-title">
+          청계산지기의 대표 음식
+        </h2>
+
+        <p class="section-desc">
+          메밀의 담백함부터
+          바삭하게 부쳐낸 전의 고소함까지,
+          청계산지기만의 한 상을 만나보세요.
+        </p>
+
+        <div class="menu-grid">
+
+          <article class="menu-item">
+            <span class="menu-category">BUCKWHEAT</span>
+            <h3>수제옹심이 메밀칼국수</h3>
+            <p>
+              쫀득한 옹심이와 메밀칼국수를
+              함께 즐기는 따뜻한 국물 요리입니다.
+              쌀쌀한 날이나 청계산 등산 후
+              든든한 한 끼로 어울립니다.
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-category">BUCKWHEAT</span>
+            <h3>손메밀묵온반</h3>
+            <p>
+              손메밀묵을 따뜻한 국물과
+              함께 즐기는 메밀 요리입니다.
+              담백하고 편안한 식사를
+              원하는 분들에게 어울립니다.
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-category">BUCKWHEAT</span>
+            <h3>손메밀묵비빔밥</h3>
+            <p>
+              손메밀묵과 여러 재료를
+              함께 비벼 먹는 식사 메뉴입니다.
+              메밀묵의 식감과 채소의 조화를
+              즐길 수 있습니다.
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-category">KOREAN PANCAKE</span>
+            <h3>오징어바글바글김치전</h3>
+            <p>
+              오징어와 김치를 활용한
+              청계산지기의 인기 전 메뉴입니다.
+              식사와 함께 나누어 먹거나
+              막걸리를 곁들이기 좋습니다.
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-category">KOREAN PANCAKE</span>
+            <h3>한우육전</h3>
+            <p>
+              한우를 사용해 부쳐낸 육전으로,
+              메밀 음식과 함께 곁들이거나
+              가족·지인과 나누어 먹기 좋습니다.
+            </p>
+          </article>
+
+          <article class="menu-item">
+            <span class="menu-category">SIDE DISH</span>
+            <h3>메밀묵무침</h3>
+            <p>
+              손메밀묵의 부드러운 식감과
+              양념의 조화를 즐길 수 있는
+              곁들임 메뉴입니다.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         10. 계절 메뉴
+         ★ 계절별 판매 여부는 변경 가능
+         ================================================ -->
+
+    <section class="light-section" id="season">
+      <div class="container">
+
+        <div class="eyebrow">SEASONAL MENU</div>
+
+        <h2 class="section-title">
+          계절이 바뀌면<br>
+          청계산지기의 식탁도 달라집니다
+        </h2>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>봄 · 봄동비빔밥</h3>
+            <p>
+              봄철 제철 봄동을 활용해
+              산뜻하게 즐기는 비빔밥입니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>여름 · 막국수</h3>
+            <p>
+              더운 날 시원하게 즐길 수 있는
+              메밀 막국수를 선보입니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>겨울 · 굴전과 굴떡국</h3>
+            <p>
+              겨울철 굴을 활용한
+              굴전과 따뜻한 굴떡국을
+              계절 메뉴로 준비합니다.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="section-desc" style="margin-top: 25px;">
+          계절 메뉴는 식재료 수급과
+          운영 시기에 따라 달라질 수 있습니다.
+        </p>
+
+      </div>
+    </section>
+
+    
+    <!-- ================================================
+         11. 투뿔한우어복쟁반 서비스
+         ★ 평일·주말 구분 없이 제공
+         ================================================ -->
+
+    <section class="dark-section" id="service">
+      <div class="container">
+
+        <div class="eyebrow">SPECIAL SERVICE</div>
+
+        <h2 class="section-title">
+          배보다 배꼽이 큰 가게입니다~
+        </h2>
+
+        <p class="section-desc">
+          청계산지기는 한 끼 식사에도
+          넉넉한 마음을 담고 싶습니다.
+        </p>
+
+        <p class="section-desc">
+          평일과 주말 관계없이
+          투뿔한우어복쟁반을
+          서비스로 제공하고 있습니다.
+        </p>
+
+        <div class="service-grid">
+
+          <article class="service-card">
+            <div class="service-day">
+              EVERY DAY · 매일
+            </div>
+
+            <h3>투뿔한우어복쟁반 서비스</h3>
+
+            <p>
+              평일에도, 주말에도!
+              청계산지기를 찾아주시는 손님께
+              투뿔한우어복쟁반을
+              서비스로 대접합니다.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="service-note">
+          ※ 서비스 제공 조건은 매장 운영 정책에 따릅니다.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ================================================
+         12. 방문 상황별 추천
+         ★ 고객 검색 의도를 반영한 콘텐츠
+         ================================================ -->
+
+    <section id="occasion">
+      <div class="container">
+
+        <div class="eyebrow">DINING OCCASIONS</div>
+
+        <h2 class="section-title">
+          이런 날 청계산지기를 찾아주세요
+        </h2>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>청계산 등산을 마친 날</h3>
+            <p>
+              원터골 등산로 근처에서
+              따뜻한 옹심이 메밀칼국수와
+              육전, 막걸리를 즐기며
+              산행을 마무리할 수 있습니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>부모님과 외식하는 날</h3>
+            <p>
+              담백한 메밀 음식부터
+              한우육전까지,
+              다양한 연령대가 함께
+              식사할 수 있는 메뉴를 준비합니다.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>남이 해준 밥이 생각나는 날</h3>
+            <p>
+              밥하기는 귀찮지만
+              집밥 같은 따뜻한 한 끼가
+              그리운 날에도
+              편안하게 방문할 수 있습니다.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         13. 자주 묻는 질문
+         ★ AEO / GEO 핵심 콘텐츠
+         ================================================ -->
+
+    <section id="faq">
+      <div class="container">
+
+        <div class="eyebrow">FREQUENTLY ASKED QUESTIONS</div>
+
+        <h2 class="section-title">
+          청계산지기 자주 묻는 질문
+        </h2>
+
+        <div class="faq-item">
+          <h3>
+            Q. 청계산지기는 어떤 식당인가요?
+          </h3>
+          <p>
+            청계산지기는 서울 서초구 청계산입구역
+            원터골 등산로 앞에 위치한
+            계절음식 전문점입니다.
+            수제옹심이 메밀칼국수,
+            손메밀묵온반, 육전, 김치전 등
+            메밀 음식과 제철 한식을 제공합니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            Q. 청계산지기 대표 메뉴는 무엇인가요?
+          </h3>
+          <p>
+            수제옹심이 메밀칼국수,
+            손메밀묵온반, 손메밀묵비빔밥,
+            오징어바글바글김치전,
+            한우육전 등이 대표 메뉴입니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            Q. 청계산 등산 후 식사하기 좋은가요?
+          </h3>
+          <p>
+            네. 청계산 원터골 등산로 입구
+            근처에 위치해 있어
+            하산 후 식사 장소로 이용하기 좋습니다.
+            메밀칼국수, 막국수, 육전 등
+            다양한 메뉴를 즐길 수 있습니다.
+          </p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>
+            Q. 투뿔한우어복쟁반은 주말에도 서비스로 제공되나요?
+          </h3>
+          <p>
+            네. 청계산지기는 평일과 주말 구분 없이
+            투뿔한우어복쟁반을 서비스로 제공합니다.
+            자세한 제공 조건은 매장에 문의해 주세요.
+          </p>
+        </div>
+
+
+        <div class="faq-item">
+          <h3>
+            Q. 주말에도 한우 서비스가 있나요?
+          </h3>
+          <p>
+            주말에는 한우수육 서비스
+            이벤트를 운영합니다.
+            대상 메뉴와 제공 조건은
+            매장에 문의해 주세요.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            Q. 청계산지기에 주차할 수 있나요?
+          </h3>
+          <p>
+            네. 네이버 플레이스에
+            전용 주차장 8대와 별도 주차 공간이
+            안내되어 있습니다.
+            주말 혼잡 시간에는
+            주차 상황이 달라질 수 있습니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            Q. 청계산입구역에서 얼마나 걸리나요?
+          </h3>
+          <p>
+            신분당선 청계산입구역 2번 출구에서
+            약 400m 거리이며,
+            원터골 방면으로 도보 약 5분입니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            Q. 부모님과 함께 방문하기 좋은가요?
+          </h3>
+          <p>
+            네. 따뜻한 메밀 요리와
+            육전, 제철 한식 메뉴가 있어
+            부모님과 가족이 함께
+            식사하기 좋은 선택지입니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            Q. 계절마다 메뉴가 달라지나요?
+          </h3>
+          <p>
+            네. 봄에는 봄동비빔밥,
+            여름에는 막국수,
+            겨울에는 굴전과 굴떡국 등
+            계절에 맞는 메뉴를 선보입니다.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>
+            Q. 청계산지기는 예약이 가능한가요?
+          </h3>
+          <p>
+            네. 네이버 플레이스에서
+            예약 서비스를 안내하고 있습니다.
+            단체 방문은 미리 예약하시는 것을
+            권장합니다.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         14. 위치 및 방문 안내
+         ★ 주소 / 전화번호 변경 시 수정
+         ================================================ -->
+
+    <section class="light-section" id="location">
+      <div class="container">
+
+        <div class="eyebrow">LOCATION & CONTACT</div>
+
+        <h2 class="section-title">
+          청계산지기 오시는 길
+        </h2>
+
+        <p>
+          <strong>매장명</strong><br>
+          청계산지기
+        </p>
+
+        <p>
+          <strong>주소</strong><br>
+          서울 서초구 청룡마을1길 3, 1층
+        </p>
+
+        <p>
+          <strong>전화번호</strong><br>
+          0507-1436-2387
+        </p>
+
+        <p>
+          <strong>대중교통</strong><br>
+          신분당선 청계산입구역 2번 출구<br>
+          원터골 방면 도보 약 5분
+        </p>
+
+        <p>
+          <strong>주차</strong><br>
+          전용 주차장 8대 및 별도 주차 공간 안내
+        </p>
+
+        <p>
+          <strong>영업시간</strong><br>
+          오후 9시 영업 종료<br>
+          <small>
+            영업 시작 시간과 브레이크타임은
+            네이버 플레이스에서 확인해 주세요.
+          </small>
+        </p>
+
+        <div class="buttons">
+
+          <a
+            class="button"
+            href="tel:050714362387"
+          >
+            전화 문의
+          </a>
+
+          <a
+            class="button outline"
+            href="https://m.place.naver.com/restaurant/1776139315/home?entry=plt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            네이버 플레이스 ↗
+          </a>
+
+          <a
+            class="button outline"
+            href="https://m.place.naver.com/restaurant/1776139315/home?entry=plt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            예약 안내 ↗
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================================================
+       15. 하단 푸터
+       ================================================== -->
+
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-brand">
+        CHEONGGYEFOREST
+      </div>
+
+      <p>
+        청계산지기 · 계절음식 전문점<br>
+        서울 서초구 청룡마을1길 3, 1층<br>
+        0507-1436-2387
+      </p>
+
+      <p>
+        청계숲양대창 청계산본점 · 강남직영점 · 청계산지기
+      </p>
+
+      <p>
+        © CHEONGGYEFOREST. All rights reserved.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
