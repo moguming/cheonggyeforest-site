@@ -52,17 +52,15 @@ const defaults = [
       "청계산 등산 후 식사와 가족 외식에 어울리는 공간입니다.",
 
     image:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=85",
+      "images/청계산대표.jpg",
 
     phone: "0507-1355-2350",
 
     address:
       "서울 서초구 청룡마을1길 15",
 
-    // 정확한 운영시간 확인 후 수정
-    hours: "영업시간은 네이버 플레이스에서 확인",
+    hours: "매일 11:00 - 22:20",
 
-    // ★ 실제 네이버 예약 신청 URL을 받으면 여기에 입력
     booking: "https://m.place.naver.com/restaurant/38217704/booking?theme=place&entry=pll&lang=ko",
 
     // 예약 URL이 없을 때 이동하는 네이버 검색 페이지
@@ -98,8 +96,7 @@ const defaults = [
       "직장인 회식, 비즈니스 모임, 가족 외식은 물론 " +
       "점심 국밥과 전골 식사도 즐길 수 있습니다.",
 
-    image:
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=85",
+    image: "images/강남대표.jpg",
 
     phone: "0507-1370-9279",
 
@@ -107,7 +104,7 @@ const defaults = [
       "서울 강남구 강남대로 324 역삼디오슈페리움 1층",
 
     // 정확한 운영시간 확인 후 수정
-    hours: "영업시간은 네이버 플레이스에서 확인",
+    hours: "평일 11:00 - 22:20 \n 브레이크타임 15:30 - 16:30 \n 주말 11:00 - 22:00 \n 브레이크 타임 없음",
 
     // ★ 실제 네이버 예약 신청 URL을 받으면 여기에 입력
     booking: "https://m.place.naver.com/restaurant/1880659013/booking?entry=pll&bk_query=%EC%B2%AD%EA%B3%84%EC%88%B2%EC%96%91%EB%8C%80%EC%B0%BD",
@@ -145,8 +142,7 @@ const defaults = [
       "평일과 주말 관계없이 투뿔한우어복쟁반을 " +
       "서비스로 제공하고 있습니다.",
 
-    image:
-      "https://images.unsplash.com/photo-1547592180-85f173990554?w=900&q=85",
+    image: "images/청지기대표.jpg",
 
     phone: "0507-1436-2387",
 
@@ -154,7 +150,7 @@ const defaults = [
       "서울 서초구 청룡마을1길 3, 1층",
 
     // 정확한 운영시간 확인 후 수정
-    hours: "영업시간은 네이버 플레이스에서 확인",
+    hours: "매일 11:00 - 21:00 \n 브레이크타임 없음",
 
     // ★ 실제 네이버 예약 신청 URL을 받으면 여기에 입력
     booking: "https://m.place.naver.com/restaurant/1776139315/booking?entry=plt",
