@@ -71,7 +71,7 @@ nav a:hover {
   justify-content:center;
   text-align:center;
   color:white;
-  background:linear-gradient(90deg,#0c100cc4,#10130d72),url('https://images.unsplash.com/photo-1544025162-d76694265947?w=1800&q=85') center/cover}
+  background:linear-gradient(90deg,#0c100cc4,#10130d72),url('images/메인배너.png') center/cover}
 
 .hero-inner {
   padding:120px 20px 90px;
